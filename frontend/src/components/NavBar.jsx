@@ -176,7 +176,7 @@ export default function NavBar() {
           .navbar-user { padding: 4px; border: none; background: transparent; }
           .navbar-dropdown { right: -8px; width: 180px; }
         }
-        @media (max-width: 350px) {
+        @media (max-width: 390px) {
           .navbar-inner { padding: 0 8px; gap: 4px; }
           .navbar-logo { font-size: 15px; gap: 4px; }
           .navbar-logo-icon svg { width: 18px; height: 18px; }
