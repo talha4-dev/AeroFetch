@@ -11,11 +11,10 @@ class Config:
     MAX_CONTENT_LENGTH = 500 * 1024 * 1024  # 500MB max
     CORS_ORIGINS = '*'
 
-    # ── Google OAuth ──────────────────────────────────────────────────────────
-    # Paste your Google OAuth 2.0 Client ID here (from console.cloud.google.com)
+    # Google OAuth
     GOOGLE_CLIENT_ID = os.environ.get(
         'GOOGLE_CLIENT_ID',
-        '55324649796-07jisag08bcoacjc0epvr66btsoacumq.apps.googleusercontent.com'  # ← REPLACE THIS
+        '55324649796-07jisag08bcoacjc0epvr66btsoacumq.apps.googleusercontent.com'
     )
 
     @staticmethod
