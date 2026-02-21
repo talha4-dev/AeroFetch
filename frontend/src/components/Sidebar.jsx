@@ -1,38 +1,38 @@
 const NAV_ITEMS = [
-    { id: 'download', icon: '⬇️', label: 'Download' },
-    { id: 'history', icon: '📋', label: 'History' },
-    { id: 'batch', icon: '🗂️', label: 'Batch' },
-    { id: 'settings', icon: '⚙️', label: 'Settings' },
+  { id: 'download', icon: '⬇️', label: 'Download' },
+  { id: 'history', icon: '📋', label: 'History' },
+  { id: 'batch', icon: '🗂️', label: 'Batch' },
+  { id: 'settings', icon: '⚙️', label: 'Settings' },
 ];
 
-export default function Sidebar({ activeTab, onTabChange }) {
-    return (
-        <aside className="sidebar">
-            <div className="sidebar-section-label">COMMAND CENTER</div>
-            <nav className="sidebar-nav">
-                {NAV_ITEMS.map(item => (
-                    <button
-                        key={item.id}
-                        className={`sidebar-item${activeTab === item.id ? ' active' : ''}`}
-                        onClick={() => onTabChange(item.id)}
-                        aria-current={activeTab === item.id ? 'page' : undefined}
-                    >
-                        <span className="sidebar-icon">{item.icon}</span>
-                        <span className="sidebar-label">{item.label}</span>
-                        {activeTab === item.id && <span className="sidebar-indicator" />}
-                    </button>
-                ))}
-            </nav>
+export default function Sidebar({ activeTab, onTabChange, isOpen }) {
+  return (
+    <aside className={`sidebar${isOpen ? ' open' : ''}`}>
+      <div className="sidebar-section-label">COMMAND CENTER</div>
+      <nav className="sidebar-nav">
+        {NAV_ITEMS.map(item => (
+          <button
+            key={item.id}
+            className={`sidebar-item${activeTab === item.id ? ' active' : ''}`}
+            onClick={() => onTabChange(item.id)}
+            aria-current={activeTab === item.id ? 'page' : undefined}
+          >
+            <span className="sidebar-icon">{item.icon}</span>
+            <span className="sidebar-label">{item.label}</span>
+            {activeTab === item.id && <span className="sidebar-indicator" />}
+          </button>
+        ))}
+      </nav>
 
-            <div className="sidebar-footer">
-                <div className="sidebar-promo">
-                    <div style={{ fontSize: '22px', marginBottom: '8px' }}>⚡</div>
-                    <p style={{ fontWeight: 700, fontSize: '13px' }}>AeroFetch Pro</p>
-                    <p style={{ fontSize: '11px', color: 'var(--text-muted)', marginTop: '4px' }}>Unlimited downloads, 4K quality</p>
-                </div>
-            </div>
+      <div className="sidebar-footer">
+        <div className="sidebar-promo">
+          <div style={{ fontSize: '22px', marginBottom: '8px' }}>⚡</div>
+          <p style={{ fontWeight: 700, fontSize: '13px' }}>AeroFetch Pro</p>
+          <p style={{ fontSize: '11px', color: 'var(--text-muted)', marginTop: '4px' }}>Unlimited downloads, 4K quality</p>
+        </div>
+      </div>
 
-            <style>{`
+      <style>{`
         .sidebar {
           width: var(--sidebar-width);
           height: calc(100vh - var(--navbar-height));
@@ -89,6 +89,6 @@ export default function Sidebar({ activeTab, onTabChange }) {
           .sidebar.open { transform: translateX(0); }
         }
       `}</style>
-        </aside>
-    );
+    </aside>
+  );
 }

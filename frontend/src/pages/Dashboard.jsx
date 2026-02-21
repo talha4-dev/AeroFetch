@@ -135,7 +135,7 @@ export default function Dashboard() {
         <div className="dashboard-page">
             <NavBar />
             <AnimatedBackground />
-            <Sidebar activeTab={activeTab} onTabChange={handleTabChange} />
+            <Sidebar activeTab={activeTab} onTabChange={handleTabChange} isOpen={sidebarOpen} />
 
             {/* Mobile overlay */}
             {sidebarOpen && (

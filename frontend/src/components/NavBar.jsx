@@ -173,6 +173,8 @@ export default function NavBar() {
           .navbar-links { display: none; }
           .navbar-username { display: none; }
           .navbar-inner { padding: 0 16px; }
+          .navbar-user { padding: 4px; border: none; background: transparent; }
+          .navbar-dropdown { right: -8px; width: 180px; }
         }
       `}</style>
         </nav>

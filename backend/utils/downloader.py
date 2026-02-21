@@ -33,6 +33,8 @@ def get_video_info(url: str) -> dict:
         'no_warnings': True,
         'extract_flat': False,
         'skip_download': True,
+        'nocheckcertificate': True,
+        'user_agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
     }
 
     try:
@@ -149,6 +151,8 @@ def download_video(url: str, format_id: str, output_format: str, quality: str) -
             'quiet': True,
             'no_warnings': True,
             'merge_output_format': 'mp4',
+            'nocheckcertificate': True,
+            'user_agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
         }
 
     try:
