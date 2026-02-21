@@ -176,6 +176,19 @@ export default function NavBar() {
           .navbar-user { padding: 4px; border: none; background: transparent; }
           .navbar-dropdown { right: -8px; width: 180px; }
         }
+        @media (max-width: 350px) {
+          .navbar-inner { padding: 0 10px; gap: 8px; }
+          .navbar-logo { font-size: 17px; gap: 6px; }
+          .navbar-logo-icon svg { width: 22px; height: 22px; }
+          .navbar-actions { gap: 6px; }
+          .theme-toggle { width: 32px; height: 32px; }
+          .theme-toggle svg { width: 16px; height: 16px; }
+          .btn-ghost { font-size: 13px; }
+          .btn-primary { 
+            padding: 8px 12px !important; 
+            font-size: 13px !important; 
+          }
+        }
       `}</style>
         </nav>
     );
