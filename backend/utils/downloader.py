@@ -49,8 +49,19 @@ def get_video_info(url: str) -> dict:
     }
 
     # Use cookies file if available (bypasses YouTube Data Center IP block on Render)
-    if os.path.exists(Config.COOKIES_FILE):
-        ydl_opts['cookiefile'] = Config.COOKIES_FILE
+    # Check both current dir and parent dir (in case of --chdir)
+    cookie_path = Config.COOKIES_FILE
+    if not os.path.exists(cookie_path) and not os.path.isabs(cookie_path):
+        alt_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), cookie_path) # App root
+        if os.path.exists(alt_path):
+            cookie_path = alt_path
+        else:
+            alt_path = os.path.join('..', cookie_path) # Relative to backend
+            if os.path.exists(alt_path):
+                cookie_path = alt_path
+
+    if os.path.exists(cookie_path):
+        ydl_opts['cookiefile'] = cookie_path
 
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
@@ -180,9 +191,19 @@ def download_video(url: str, format_id: str, output_format: str, quality: str) -
             }
         }
 
-    # Use cookies file if available (bypasses YouTube Data Center IP block on Render)
-    if os.path.exists(Config.COOKIES_FILE):
-        ydl_opts['cookiefile'] = Config.COOKIES_FILE
+    # Use cookies file if available
+    cookie_path = Config.COOKIES_FILE
+    if not os.path.exists(cookie_path) and not os.path.isabs(cookie_path):
+        alt_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), cookie_path) # App root
+        if os.path.exists(alt_path):
+            cookie_path = alt_path
+        else:
+            alt_path = os.path.join('..', cookie_path) # Relative to backend
+            if os.path.exists(alt_path):
+                cookie_path = alt_path
+
+    if os.path.exists(cookie_path):
+        ydl_opts['cookiefile'] = cookie_path
 
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
