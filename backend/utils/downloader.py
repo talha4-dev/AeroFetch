@@ -188,7 +188,7 @@ def download_video(url: str, format_id: str, output_format: str, quality: str) -
             'referer': 'https://www.youtube.com/',
             'extractor_args': {
                 'youtube': {
-                    'player_client': ['web', 'mweb', 'android'],
+                    'player_client': ['web', 'mweb', 'android', 'ios', 'web_embedded'],
                 }
             },
             'http_headers': {
