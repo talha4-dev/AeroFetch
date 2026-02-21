@@ -102,8 +102,8 @@ def download_file():
         download_name=file_name,
     )
 
-    # Schedule cleanup after sending
-    threading.Timer(60, cleanup, args=[file_path]).start()
+    # Schedule cleanup after 10 minutes to support slow connections
+    threading.Timer(600, cleanup, args=[file_path]).start()
     return response
 
 
