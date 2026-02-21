@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+instance/
+venv/
+.venv/
+.env
+
+# Node.js
+node_modules/
+.npm
+dist/
+
+# OS
+.DS_Store
+Thumbs.db
