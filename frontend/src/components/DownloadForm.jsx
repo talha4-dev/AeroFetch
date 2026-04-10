@@ -218,8 +218,8 @@ export default function DownloadForm({ compact = false }) {
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
                             <h4 className="quality-title">Choose Format & Quality</h4>
                             {!user && (
-                                <span style={{ fontSize: '11px', color: 'var(--brand-primary)', fontWeight: 'bold' }}>
-                                    🔒 Login for 4K & MP3
+                                <span style={{ fontSize: '11px', color: 'var(--text-muted)', fontWeight: 'bold' }}>
+                                    ✨ All Qualities Available
                                 </span>
                             )}
                         </div>
@@ -228,16 +228,13 @@ export default function DownloadForm({ compact = false }) {
                                 <span className="quality-group-label">🎬 Video</span>
                                 <div className="quality-pills">
                                     {QUALITY_OPTIONS.filter(q => q.type === 'video').map(q => {
-                                        const isLocked = !user && q.value !== '360p';
                                         return (
                                             <button
                                                 key={q.value}
-                                                className={`quality-pill${selectedQuality === q.value ? ' active' : ''}${isLocked ? ' locked' : ''}`}
-                                                onClick={() => !isLocked && setSelectedQuality(q.value)}
+                                                className={`quality-pill${selectedQuality === q.value ? ' active' : ''}`}
+                                                onClick={() => setSelectedQuality(q.value)}
                                                 style={{ '--pill-color': q.color }}
-                                                title={isLocked ? "Login to unlock high quality" : ""}
                                             >
-                                                {isLocked && <span style={{ marginRight: '4px' }}>🔒</span>}
                                                 {q.badge}
                                             </button>
                                         );
@@ -248,16 +245,13 @@ export default function DownloadForm({ compact = false }) {
                                 <span className="quality-group-label">🎵 Audio Only</span>
                                 <div className="quality-pills">
                                     {QUALITY_OPTIONS.filter(q => q.type === 'audio').map(q => {
-                                        const isLocked = !user;
                                         return (
                                             <button
                                                 key={q.value}
-                                                className={`quality-pill audio${selectedQuality === q.value ? ' active' : ''}${isLocked ? ' locked' : ''}`}
-                                                onClick={() => !isLocked && setSelectedQuality(q.value)}
+                                                className={`quality-pill audio${selectedQuality === q.value ? ' active' : ''}`}
+                                                onClick={() => setSelectedQuality(q.value)}
                                                 style={{ '--pill-color': q.color }}
-                                                title={isLocked ? "Login to unlock audio formats" : ""}
                                             >
-                                                {isLocked && <span style={{ marginRight: '4px' }}>🔒</span>}
                                                 {q.badge}
                                             </button>
                                         );
@@ -272,7 +266,7 @@ export default function DownloadForm({ compact = false }) {
                         )}
                         {!user && (
                             <p style={{ fontSize: '12px', color: 'var(--text-muted)', marginTop: '8px', background: 'rgba(108,99,255,0.05)', padding: '10px', borderRadius: '8px', border: '1px dashed var(--border-color)' }}>
-                                💡 <strong>Guest Mode:</strong> Downloads are limited to 360p. <a href="/auth" style={{ color: 'var(--brand-primary)', fontWeight: '700' }}>Login</a> to unlock 4K, 1080p, and MP3 audio extraction.
+                                💡 <strong>Pro Tip:</strong> <a href="/auth" style={{ color: 'var(--brand-primary)', fontWeight: '700' }}>Login</a> to save your download history to your account forever.
                             </p>
                         )}
                     </div>

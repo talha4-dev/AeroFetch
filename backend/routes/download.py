@@ -42,21 +42,8 @@ def download_file():
     if not sanity['valid']:
         return jsonify({'success': False, 'error': sanity['error']}), 400
 
-    # Security check: Restrict guests to 360p only
-    try:
-        verify_jwt_in_request(optional=True)
-        user_id = get_jwt_identity()
-    except Exception:
-        user_id = None
-
-    if not user_id:
-        # If guest, enforce 360p and no audio extraction
-        if output_format in ['mp3', 'm4a']:
-            return jsonify({'success': False, 'error': 'Audio extraction requires login.'}), 403
-        if quality != '360p':
-            # Force 360p for guest if they somehow bypass frontend
-            quality = '360p'
-            format_id = 'bestvideo[height<=360]+bestaudio/best[height<=360]'
+    # Quality and format are now determined strictly by user selection
+    # (Previously forced guests to 360p/no-audio)
 
     result = download_video(sanity['url'], format_id, output_format, quality)
     if not result['success']:
