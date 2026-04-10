@@ -142,7 +142,7 @@ def google_auth():
             if not user.picture:
                 user.picture = picture
         else:
-            # Brand-new user via Google — create without password
+            # Brand-new user via Google - create without password
             user = User(
                 email=email,
                 name=name,

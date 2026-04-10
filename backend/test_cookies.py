@@ -31,34 +31,34 @@ def check_cookie_validity(cookie_path):
         # If 'CONSENT' or 'LOGIN_INFO' is present in our request's effects or if we get a valid page
         return response.status_code == 200 and ('LOGIN_INFO' in str(response.request._cookies) or 'SID' in str(response.request._cookies))
     except Exception as e:
-        print(f"⚠️ Live check error: {e}")
+        print(f"[ERROR] Live check error: {e}")
         return False
 
 def test_cookies():
-    print("🧪 Testing YouTube cookies configuration...")
+    print("[TEST] Testing YouTube cookies configuration...")
     
     cookie_path = get_cookies_path()
     if not cookie_path:
-        print("❌ No cookies file found at Config.COOKIES_FILE")
+        print("[FAILED] No cookies file found at Config.COOKIES_FILE")
         return False
         
-    print(f"📁 Cookies file: {cookie_path}")
+    print(f"[INFO] Cookies file: {cookie_path}")
     
     # 1. Structural Check
     if validate_cookies(cookie_path):
-        print("✅ Structural check PASSED - essential cookies found in file")
+        print("[SUCCESS] Structural check PASSED - essential cookies found in file")
         
         # 2. Live Validity Check
-        print("🌐 Performing live validity check...")
+        print("[PROGRESS] Performing live validity check...")
         if check_cookie_validity(cookie_path):
-            print("✅ Live check PASSED - YouTube accepted these cookies!")
-            print("🎯 You are ready for high-quality authenticated downloads.")
+            print("[SUCCESS] Live check PASSED - YouTube accepted these cookies!")
+            print("[READY] You are ready for high-quality authenticated downloads.")
             return True
         else:
-            print("❌ Live check FAILED - cookies might be expired or blocked")
+            print("[FAILED] Live check FAILED - cookies might be expired or blocked")
             return False
     else:
-        print("❌ Structural check FAILED - check your cookies file content")
+        print("[FAILED] Structural check FAILED - check your cookies file content")
         return False
 
 if __name__ == "__main__":

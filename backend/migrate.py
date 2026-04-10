@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-AeroFetch — Database Migration Script
+AeroFetch - Database Migration Script
 Adds google_id and picture columns to the users table.
 Run this once: python3 migrate.py
 """
@@ -22,14 +22,14 @@ with app.app_context():
 
         if 'google_id' not in cols:
             conn.execute(text("ALTER TABLE users ADD COLUMN google_id VARCHAR(120)"))
-            print("✅ Added google_id column")
+            print("[SUCCESS] Added google_id column")
         else:
-            print("ℹ️  google_id already exists")
+            print("[INFO] google_id already exists")
 
         if 'picture' not in cols:
             conn.execute(text("ALTER TABLE users ADD COLUMN picture TEXT"))
-            print("✅ Added picture column")
+            print("[SUCCESS] Added picture column")
         else:
-            print("ℹ️  picture already exists")
+            print("[INFO] picture already exists")
 
-    print("\n✅ Migration complete! Restart the backend server.")
+    print("\n[SUCCESS] Migration complete! Restart the backend server.")

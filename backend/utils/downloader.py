@@ -100,7 +100,7 @@ def validate_cookies(cookie_path):
                 logger.warning("Cookies have expired")
                 return False
         
-        logger.info("✅ Cookies validation passed - fresh and complete")
+        logger.info("[SUCCESS] Cookies validation passed - fresh and complete")
         return True
         
     except Exception as e:
@@ -218,10 +218,10 @@ def get_video_info(url: str) -> dict:
         ydl_opts['cookiefile'] = cookie_path
         # Force browser cookie behavior
         ydl_opts['cookiesfrombrowser'] = ('chrome',) if platform.system() == "Windows" else None
-        logger.info("✅ Using validated cookies with browser emulation")
+        logger.info("[SUCCESS] Using validated cookies with browser emulation")
         cookies_found = True
     else:
-        logger.warning("⚠️ No valid cookies found, attempting without")
+        logger.warning("[WARNING] No valid cookies found, attempting without")
 
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:

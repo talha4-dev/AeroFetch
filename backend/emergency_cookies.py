@@ -7,7 +7,7 @@ import time
 from datetime import datetime
 
 def emergency_cookie_refresh():
-    print("🔄 EMERGENCY YouTube Cookie Refresh for Pakistan")
+    print("[RESET] EMERGENCY YouTube Cookie Refresh for Pakistan")
     print("==============================================")
     
     # Backup existing cookies
@@ -15,7 +15,7 @@ def emergency_cookie_refresh():
     if os.path.exists(cookie_file):
         backup_name = f'cookies_backup_{datetime.now().strftime("%Y%m%d_%H%M%S")}.txt'
         os.rename(cookie_file, backup_name)
-        print(f"📦 Backed up existing cookies to: {backup_name}")
+        print(f"[BACKUP] Backed up existing cookies to: {backup_name}")
     
     # Create fresh Pakistan-specific cookies
     with open(cookie_file, 'w') as f:
@@ -46,8 +46,8 @@ def emergency_cookie_refresh():
 .youtube.com	TRUE	/	TRUE	1791363475	__Secure-ROLLOUT_TOKEN	CJbJ5a_ts_W6PxDgspmR08qTAxjg-7Ch9eKTAw%3D%3D
 """)
     
-    print("✅ Fresh Pakistan-specific cookies created")
-    print("⚠️  IMPORTANT: You must LOGIN to YouTube and export FRESH cookies")
+    print("[SUCCESS] Fresh Pakistan-specific cookies created")
+    print("[IMPORTANT] IMPORTANT: You must LOGIN to YouTube and export FRESH cookies")
     print("   using the 'Get cookies.txt' browser extension")
     print("   Replace the auto-generated cookies with your actual login cookies")
     
