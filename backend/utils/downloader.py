@@ -110,7 +110,8 @@ def get_video_info(url: str) -> dict:
 
     # Use cookies file if available
     cookie_path = get_cookies_path()
-    if cookie_path:
+    cookies_found = cookie_path is not None
+    if cookies_found:
         ydl_opts['cookiefile'] = cookie_path
 
     try:
@@ -252,7 +253,8 @@ def download_video(url: str, format_id: str, output_format: str, quality: str) -
 
     # Use cookies file if available
     cookie_path = get_cookies_path()
-    if cookie_path:
+    cookies_found = cookie_path is not None
+    if cookies_found:
         ydl_opts['cookiefile'] = cookie_path
 
     try:
