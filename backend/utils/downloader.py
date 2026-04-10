@@ -141,26 +141,33 @@ def get_video_info(url: str) -> dict:
         'referer': 'https://www.youtube.com/',
         'extractor_args': {
             'youtube': {
-                'player_client': ['android', 'web'],  # Use mobile and web clients
-                'skip': ['dash', 'hls'],  # Skip problematic formats
-                'include_dash_manifest': False,
-                'include_hls_manifest': False,
+                'player_client': ['android', 'mweb'],  # Mobile clients work better in Pakistan
+                'skip': ['dash', 'hls'],
+                'throttled_rate': '100K',  # Simulate human download speed
             }
         },
         'geo_bypass': True,
-        'geo_bypass_country': 'PK',  # Pakistan country code
+        'geo_bypass_country': 'PK',
+        'geo_bypass_ip_block': '191.101.0.0/16',  # Pakistan IP range
         'http_headers': {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+            'User-Agent': 'Mozilla/5.0 (Linux; Android 11; SM-A225F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.104 Mobile Safari/537.36',
             'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
-            'Accept-Language': 'en-PK,en;q=0.9,ur;q=0.8',  # Pakistan-specific language
+            'Accept-Language': 'en-PK,en;q=0.9,ur;q=0.8',
             'Accept-Encoding': 'gzip, deflate',
             'Connection': 'keep-alive',
             'Upgrade-Insecure-Requests': '1',
-            'X-YouTube-Client-Name': '1',
-            'X-YouTube-Client-Version': '2.20240101.00.00',
+            'X-YouTube-Client-Name': '2',  # Android client
+            'X-YouTube-Client-Version': '17.31.35',
+            'X-Forwarded-For': '191.101.1.1',  # Pakistani IP
         },
+        'sleep_interval': 2,  # Add delay between requests
+        'max_sleep_interval': 5,
+        'retries': 10,
+        'fragment_retries': 10,
+        'skip_unavailable_fragments': True,
         'ffmpeg_location': FFMPEG_PATH,
         'logger': YDLLogger(),
+        'verbose': True,  # Enable verbose logging for debugging
     }
 
     # Use cookies file if available
