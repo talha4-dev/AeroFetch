@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: aerofetch-backend
+    runtime: python
+    plan: free
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: gunicorn app:app --chdir backend
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.0
+      - key: PORT
+        value: 10000
+      - key: RENDER_NIX_PACKAGES
+        value: ffmpeg

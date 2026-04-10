@@ -1,0 +1,315 @@
+2026-04-10 03:07:13,826 - INFO - Serving on http://0.0.0.0:5000
+2026-04-10 03:09:58,633 - INFO - Serving on http://0.0.0.0:5000
+2026-04-10 03:17:13,027 - INFO - Serving on http://0.0.0.0:5000
+2026-04-10 03:18:45,288 - INFO - [youtube] Extracting URL: https://www.youtube.com/watch?v=aqz-KE-bpKQ
+2026-04-10 03:18:45,288 - INFO - [youtube] aqz-KE-bpKQ: Downloading webpage
+2026-04-10 03:18:46,664 - INFO - [youtube] aqz-KE-bpKQ: Downloading android player API JSON
+2026-04-10 03:18:47,141 - INFO - [youtube] aqz-KE-bpKQ: Downloading ios player API JSON
+2026-04-10 03:18:47,617 - INFO - [youtube] aqz-KE-bpKQ: Downloading mweb client config
+2026-04-10 03:18:48,141 - INFO - [youtube] aqz-KE-bpKQ: Downloading mweb player API JSON
+2026-04-10 03:18:48,544 - INFO - [youtube] aqz-KE-bpKQ: Downloading tv client config
+2026-04-10 03:18:49,082 - INFO - [youtube] aqz-KE-bpKQ: Downloading player 041232d8-main
+2026-04-10 03:18:49,542 - INFO - [youtube] aqz-KE-bpKQ: Downloading tv player API JSON
+2026-04-10 03:18:50,034 - WARNING - [youtube] aqz-KE-bpKQ: android client https formats require a GVS PO Token which was not provided. They will be skipped as they may yield HTTP Error 403. You can manually pass a GVS PO Token for this client with --extractor-args "youtube:po_token=android.gvs+XXX". For more information, refer to  https://github.com/yt-dlp/yt-dlp/wiki/PO-Token-Guide
+2026-04-10 03:18:50,063 - WARNING - [youtube] aqz-KE-bpKQ: ios client https formats require a GVS PO Token which was not provided. They will be skipped as they may yield HTTP Error 403. You can manually pass a GVS PO Token for this client with --extractor-args "youtube:po_token=ios.gvs+XXX". For more information, refer to  https://github.com/yt-dlp/yt-dlp/wiki/PO-Token-Guide
+2026-04-10 03:18:50,087 - WARNING - [youtube] aqz-KE-bpKQ: ios client hls formats require a GVS PO Token which was not provided. They will be skipped as they may yield HTTP Error 403. You can manually pass a GVS PO Token for this client with --extractor-args "youtube:po_token=ios.gvs+XXX". For more information, refer to  https://github.com/yt-dlp/yt-dlp/wiki/PO-Token-Guide
+2026-04-10 03:18:50,092 - WARNING - [youtube] aqz-KE-bpKQ: mweb client https formats require a GVS PO Token which was not provided. They will be skipped as they may yield HTTP Error 403. You can manually pass a GVS PO Token for this client with --extractor-args "youtube:po_token=mweb.gvs+XXX". For more information, refer to  https://github.com/yt-dlp/yt-dlp/wiki/PO-Token-Guide
+2026-04-10 03:18:50,291 - WARNING - [youtube] aqz-KE-bpKQ: n challenge solving failed: Some formats may be missing. Ensure you have a supported JavaScript runtime and challenge solver script distribution installed. Review any warnings presented before this message. For more details, refer to  https://github.com/yt-dlp/yt-dlp/wiki/EJS
+2026-04-10 03:21:23,307 - INFO - Serving on http://0.0.0.0:5000
+2026-04-10 03:21:47,979 - INFO - [youtube] Extracting URL: https://youtu.be/LrN9TyoJHfw?si=7wa8n3zxthi3qzK1
+2026-04-10 03:21:47,980 - INFO - [youtube] LrN9TyoJHfw: Downloading webpage
+2026-04-10 03:21:48,967 - INFO - [youtube] LrN9TyoJHfw: Downloading android player API JSON
+2026-04-10 03:21:49,510 - INFO - [youtube] LrN9TyoJHfw: Downloading ios player API JSON
+2026-04-10 03:21:50,002 - INFO - [youtube] LrN9TyoJHfw: Downloading mweb client config
+2026-04-10 03:21:50,568 - INFO - [youtube] LrN9TyoJHfw: Downloading mweb player API JSON
+2026-04-10 03:21:51,098 - INFO - [youtube] LrN9TyoJHfw: Downloading tv client config
+2026-04-10 03:21:51,600 - INFO - [youtube] LrN9TyoJHfw: Downloading player 8a6e7bc4-main
+2026-04-10 03:21:52,064 - INFO - [youtube] LrN9TyoJHfw: Downloading tv player API JSON
+2026-04-10 03:21:52,696 - WARNING - [youtube] LrN9TyoJHfw: android client https formats require a GVS PO Token which was not provided. They will be skipped as they may yield HTTP Error 403. You can manually pass a GVS PO Token for this client with --extractor-args "youtube:po_token=android.gvs+XXX". For more information, refer to  https://github.com/yt-dlp/yt-dlp/wiki/PO-Token-Guide
+2026-04-10 03:21:52,702 - WARNING - [youtube] LrN9TyoJHfw: ios client https formats require a GVS PO Token which was not provided. They will be skipped as they may yield HTTP Error 403. You can manually pass a GVS PO Token for this client with --extractor-args "youtube:po_token=ios.gvs+XXX". For more information, refer to  https://github.com/yt-dlp/yt-dlp/wiki/PO-Token-Guide
+2026-04-10 03:21:52,738 - WARNING - [youtube] LrN9TyoJHfw: ios client hls formats require a GVS PO Token which was not provided. They will be skipped as they may yield HTTP Error 403. You can manually pass a GVS PO Token for this client with --extractor-args "youtube:po_token=ios.gvs+XXX". For more information, refer to  https://github.com/yt-dlp/yt-dlp/wiki/PO-Token-Guide
+2026-04-10 03:21:52,743 - WARNING - [youtube] LrN9TyoJHfw: mweb client https formats require a GVS PO Token which was not provided. They will be skipped as they may yield HTTP Error 403. You can manually pass a GVS PO Token for this client with --extractor-args "youtube:po_token=mweb.gvs+XXX". For more information, refer to  https://github.com/yt-dlp/yt-dlp/wiki/PO-Token-Guide
+2026-04-10 03:21:52,772 - WARNING - [youtube] LrN9TyoJHfw: Some tv client https formats have been skipped as they are DRM protected. The current session may have an experiment that applies DRM to all videos on the tv client. See  https://github.com/yt-dlp/yt-dlp/issues/12563  for more details.
+2026-04-10 03:21:52,773 - WARNING - [youtube] LrN9TyoJHfw: n challenge solving failed: Some formats may be missing. Ensure you have a supported JavaScript runtime and challenge solver script distribution installed. Review any warnings presented before this message. For more details, refer to  https://github.com/yt-dlp/yt-dlp/wiki/EJS
+2026-04-10 03:22:59,210 - INFO - [youtube] Extracting URL: https://youtu.be/LrN9TyoJHfw?si=7wa8n3zxthi3qzK1
+2026-04-10 03:22:59,211 - INFO - [youtube] LrN9TyoJHfw: Downloading webpage
+2026-04-10 03:23:00,218 - INFO - [youtube] LrN9TyoJHfw: Downloading android player API JSON
+2026-04-10 03:23:00,714 - INFO - [youtube] LrN9TyoJHfw: Downloading ios player API JSON
+2026-04-10 03:23:01,183 - INFO - [youtube] LrN9TyoJHfw: Downloading mweb client config
+2026-04-10 03:23:01,724 - INFO - [youtube] LrN9TyoJHfw: Downloading mweb player API JSON
+2026-04-10 03:23:02,367 - INFO - [youtube] LrN9TyoJHfw: Downloading tv client config
+2026-04-10 03:23:02,913 - INFO - [youtube] LrN9TyoJHfw: Downloading player 8a6e7bc4-main
+2026-04-10 03:23:03,393 - INFO - [youtube] LrN9TyoJHfw: Downloading tv player API JSON
+2026-04-10 03:23:04,012 - WARNING - [youtube] LrN9TyoJHfw: android client https formats require a GVS PO Token which was not provided. They will be skipped as they may yield HTTP Error 403. You can manually pass a GVS PO Token for this client with --extractor-args "youtube:po_token=android.gvs+XXX". For more information, refer to  https://github.com/yt-dlp/yt-dlp/wiki/PO-Token-Guide
+2026-04-10 03:23:04,018 - WARNING - [youtube] LrN9TyoJHfw: ios client https formats require a GVS PO Token which was not provided. They will be skipped as they may yield HTTP Error 403. You can manually pass a GVS PO Token for this client with --extractor-args "youtube:po_token=ios.gvs+XXX". For more information, refer to  https://github.com/yt-dlp/yt-dlp/wiki/PO-Token-Guide
+2026-04-10 03:23:04,023 - WARNING - [youtube] LrN9TyoJHfw: ios client hls formats require a GVS PO Token which was not provided. They will be skipped as they may yield HTTP Error 403. You can manually pass a GVS PO Token for this client with --extractor-args "youtube:po_token=ios.gvs+XXX". For more information, refer to  https://github.com/yt-dlp/yt-dlp/wiki/PO-Token-Guide
+2026-04-10 03:23:04,028 - WARNING - [youtube] LrN9TyoJHfw: mweb client https formats require a GVS PO Token which was not provided. They will be skipped as they may yield HTTP Error 403. You can manually pass a GVS PO Token for this client with --extractor-args "youtube:po_token=mweb.gvs+XXX". For more information, refer to  https://github.com/yt-dlp/yt-dlp/wiki/PO-Token-Guide
+2026-04-10 03:23:04,059 - WARNING - [youtube] LrN9TyoJHfw: Some tv client https formats have been skipped as they are DRM protected. The current session may have an experiment that applies DRM to all videos on the tv client. See  https://github.com/yt-dlp/yt-dlp/issues/12563  for more details.
+2026-04-10 03:23:04,059 - WARNING - [youtube] LrN9TyoJHfw: n challenge solving failed: Some formats may be missing. Ensure you have a supported JavaScript runtime and challenge solver script distribution installed. Review any warnings presented before this message. For more details, refer to  https://github.com/yt-dlp/yt-dlp/wiki/EJS
+2026-04-10 03:23:10,526 - INFO - [youtube] Extracting URL: https://youtu.be/LrN9TyoJHfw?si=7wa8n3zxthi3qzK1
+2026-04-10 03:23:10,526 - INFO - [youtube] LrN9TyoJHfw: Downloading webpage
+2026-04-10 03:23:11,715 - INFO - [youtube] LrN9TyoJHfw: Downloading android player API JSON
+2026-04-10 03:23:12,193 - INFO - [youtube] LrN9TyoJHfw: Downloading ios player API JSON
+2026-04-10 03:23:12,637 - INFO - [youtube] LrN9TyoJHfw: Downloading mweb client config
+2026-04-10 03:23:13,212 - INFO - [youtube] LrN9TyoJHfw: Downloading mweb player API JSON
+2026-04-10 03:23:13,811 - INFO - [youtube] LrN9TyoJHfw: Downloading tv client config
+2026-04-10 03:23:14,334 - INFO - [youtube] LrN9TyoJHfw: Downloading player 8a6e7bc4-main
+2026-04-10 03:23:14,802 - INFO - [youtube] LrN9TyoJHfw: Downloading tv player API JSON
+2026-04-10 03:23:15,413 - WARNING - [youtube] LrN9TyoJHfw: android client https formats require a GVS PO Token which was not provided. They will be skipped as they may yield HTTP Error 403. You can manually pass a GVS PO Token for this client with --extractor-args "youtube:po_token=android.gvs+XXX". For more information, refer to  https://github.com/yt-dlp/yt-dlp/wiki/PO-Token-Guide
+2026-04-10 03:23:15,418 - WARNING - [youtube] LrN9TyoJHfw: ios client https formats require a GVS PO Token which was not provided. They will be skipped as they may yield HTTP Error 403. You can manually pass a GVS PO Token for this client with --extractor-args "youtube:po_token=ios.gvs+XXX". For more information, refer to  https://github.com/yt-dlp/yt-dlp/wiki/PO-Token-Guide
+2026-04-10 03:23:15,424 - WARNING - [youtube] LrN9TyoJHfw: ios client hls formats require a GVS PO Token which was not provided. They will be skipped as they may yield HTTP Error 403. You can manually pass a GVS PO Token for this client with --extractor-args "youtube:po_token=ios.gvs+XXX". For more information, refer to  https://github.com/yt-dlp/yt-dlp/wiki/PO-Token-Guide
+2026-04-10 03:23:15,429 - WARNING - [youtube] LrN9TyoJHfw: mweb client https formats require a GVS PO Token which was not provided. They will be skipped as they may yield HTTP Error 403. You can manually pass a GVS PO Token for this client with --extractor-args "youtube:po_token=mweb.gvs+XXX". For more information, refer to  https://github.com/yt-dlp/yt-dlp/wiki/PO-Token-Guide
+2026-04-10 03:23:15,459 - WARNING - [youtube] LrN9TyoJHfw: Some tv client https formats have been skipped as they are DRM protected. The current session may have an experiment that applies DRM to all videos on the tv client. See  https://github.com/yt-dlp/yt-dlp/issues/12563  for more details.
+2026-04-10 03:23:15,459 - WARNING - [youtube] LrN9TyoJHfw: n challenge solving failed: Some formats may be missing. Ensure you have a supported JavaScript runtime and challenge solver script distribution installed. Review any warnings presented before this message. For more details, refer to  https://github.com/yt-dlp/yt-dlp/wiki/EJS
+2026-04-10 03:23:15,559 - ERROR - [0;31mERROR:[0m [youtube] LrN9TyoJHfw: Requested format is not available. Use --list-formats for a list of available formats
+2026-04-10 03:23:15,559 - ERROR - Download failed
+Traceback (most recent call last):
+  File "E:\talha\AeroFetch-main\AeroFetch-main\venv\Lib\site-packages\yt_dlp\YoutubeDL.py", line 1698, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\talha\AeroFetch-main\AeroFetch-main\venv\Lib\site-packages\yt_dlp\YoutubeDL.py", line 1854, in __extract_info
+    return self.process_ie_result(ie_result, download, extra_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\talha\AeroFetch-main\AeroFetch-main\venv\Lib\site-packages\yt_dlp\YoutubeDL.py", line 1913, in process_ie_result
+    ie_result = self.process_video_result(ie_result, download=download)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\talha\AeroFetch-main\AeroFetch-main\venv\Lib\site-packages\yt_dlp\YoutubeDL.py", line 3058, in process_video_result
+    raise ExtractorError(
+yt_dlp.utils.ExtractorError: [youtube] LrN9TyoJHfw: Requested format is not available. Use --list-formats for a list of available formats
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\talha\AeroFetch-main\AeroFetch-main\backend\utils\downloader.py", line 250, in download_video
+    info = ydl.extract_info(url, download=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\talha\AeroFetch-main\AeroFetch-main\venv\Lib\site-packages\yt_dlp\YoutubeDL.py", line 1687, in extract_info
+    return self.__extract_info(url, self.get_info_extractor(key), download, extra_info, process)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\talha\AeroFetch-main\AeroFetch-main\venv\Lib\site-packages\yt_dlp\YoutubeDL.py", line 1716, in wrapper
+    self.report_error(str(e), e.format_traceback())
+  File "E:\talha\AeroFetch-main\AeroFetch-main\venv\Lib\site-packages\yt_dlp\YoutubeDL.py", line 1154, in report_error
+    self.trouble(f'{self._format_err("ERROR:", self.Styles.ERROR)} {message}', *args, **kwargs)
+  File "E:\talha\AeroFetch-main\AeroFetch-main\venv\Lib\site-packages\yt_dlp\YoutubeDL.py", line 1093, in trouble
+    raise DownloadError(message, exc_info)
+yt_dlp.utils.DownloadError: [0;31mERROR:[0m [youtube] LrN9TyoJHfw: Requested format is not available. Use --list-formats for a list of available formats
+2026-04-10 03:23:21,106 - INFO - [youtube] Extracting URL: https://youtu.be/LrN9TyoJHfw?si=7wa8n3zxthi3qzK1
+2026-04-10 03:23:21,107 - INFO - [youtube] LrN9TyoJHfw: Downloading webpage
+2026-04-10 03:23:22,324 - INFO - [youtube] LrN9TyoJHfw: Downloading android player API JSON
+2026-04-10 03:23:22,810 - INFO - [youtube] LrN9TyoJHfw: Downloading ios player API JSON
+2026-04-10 03:23:23,242 - INFO - [youtube] LrN9TyoJHfw: Downloading mweb client config
+2026-04-10 03:23:23,788 - INFO - [youtube] LrN9TyoJHfw: Downloading mweb player API JSON
+2026-04-10 03:23:24,301 - INFO - [youtube] LrN9TyoJHfw: Downloading tv client config
+2026-04-10 03:23:24,989 - INFO - [youtube] LrN9TyoJHfw: Downloading player 8a6e7bc4-main
+2026-04-10 03:23:25,524 - INFO - [youtube] LrN9TyoJHfw: Downloading tv player API JSON
+2026-04-10 03:23:26,191 - WARNING - [youtube] LrN9TyoJHfw: android client https formats require a GVS PO Token which was not provided. They will be skipped as they may yield HTTP Error 403. You can manually pass a GVS PO Token for this client with --extractor-args "youtube:po_token=android.gvs+XXX". For more information, refer to  https://github.com/yt-dlp/yt-dlp/wiki/PO-Token-Guide
+2026-04-10 03:23:26,196 - WARNING - [youtube] LrN9TyoJHfw: ios client https formats require a GVS PO Token which was not provided. They will be skipped as they may yield HTTP Error 403. You can manually pass a GVS PO Token for this client with --extractor-args "youtube:po_token=ios.gvs+XXX". For more information, refer to  https://github.com/yt-dlp/yt-dlp/wiki/PO-Token-Guide
+2026-04-10 03:23:26,202 - WARNING - [youtube] LrN9TyoJHfw: ios client hls formats require a GVS PO Token which was not provided. They will be skipped as they may yield HTTP Error 403. You can manually pass a GVS PO Token for this client with --extractor-args "youtube:po_token=ios.gvs+XXX". For more information, refer to  https://github.com/yt-dlp/yt-dlp/wiki/PO-Token-Guide
+2026-04-10 03:23:26,207 - WARNING - [youtube] LrN9TyoJHfw: mweb client https formats require a GVS PO Token which was not provided. They will be skipped as they may yield HTTP Error 403. You can manually pass a GVS PO Token for this client with --extractor-args "youtube:po_token=mweb.gvs+XXX". For more information, refer to  https://github.com/yt-dlp/yt-dlp/wiki/PO-Token-Guide
+2026-04-10 03:23:26,237 - WARNING - [youtube] LrN9TyoJHfw: Some tv client https formats have been skipped as they are DRM protected. The current session may have an experiment that applies DRM to all videos on the tv client. See  https://github.com/yt-dlp/yt-dlp/issues/12563  for more details.
+2026-04-10 03:23:26,237 - WARNING - [youtube] LrN9TyoJHfw: n challenge solving failed: Some formats may be missing. Ensure you have a supported JavaScript runtime and challenge solver script distribution installed. Review any warnings presented before this message. For more details, refer to  https://github.com/yt-dlp/yt-dlp/wiki/EJS
+2026-04-10 03:23:26,339 - ERROR - [0;31mERROR:[0m [youtube] LrN9TyoJHfw: Requested format is not available. Use --list-formats for a list of available formats
+2026-04-10 03:23:26,339 - ERROR - Download failed
+Traceback (most recent call last):
+  File "E:\talha\AeroFetch-main\AeroFetch-main\venv\Lib\site-packages\yt_dlp\YoutubeDL.py", line 1698, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\talha\AeroFetch-main\AeroFetch-main\venv\Lib\site-packages\yt_dlp\YoutubeDL.py", line 1854, in __extract_info
+    return self.process_ie_result(ie_result, download, extra_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\talha\AeroFetch-main\AeroFetch-main\venv\Lib\site-packages\yt_dlp\YoutubeDL.py", line 1913, in process_ie_result
+    ie_result = self.process_video_result(ie_result, download=download)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\talha\AeroFetch-main\AeroFetch-main\venv\Lib\site-packages\yt_dlp\YoutubeDL.py", line 3058, in process_video_result
+    raise ExtractorError(
+yt_dlp.utils.ExtractorError: [youtube] LrN9TyoJHfw: Requested format is not available. Use --list-formats for a list of available formats
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\talha\AeroFetch-main\AeroFetch-main\backend\utils\downloader.py", line 250, in download_video
+    info = ydl.extract_info(url, download=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\talha\AeroFetch-main\AeroFetch-main\venv\Lib\site-packages\yt_dlp\YoutubeDL.py", line 1687, in extract_info
+    return self.__extract_info(url, self.get_info_extractor(key), download, extra_info, process)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\talha\AeroFetch-main\AeroFetch-main\venv\Lib\site-packages\yt_dlp\YoutubeDL.py", line 1716, in wrapper
+    self.report_error(str(e), e.format_traceback())
+  File "E:\talha\AeroFetch-main\AeroFetch-main\venv\Lib\site-packages\yt_dlp\YoutubeDL.py", line 1154, in report_error
+    self.trouble(f'{self._format_err("ERROR:", self.Styles.ERROR)} {message}', *args, **kwargs)
+  File "E:\talha\AeroFetch-main\AeroFetch-main\venv\Lib\site-packages\yt_dlp\YoutubeDL.py", line 1093, in trouble
+    raise DownloadError(message, exc_info)
+yt_dlp.utils.DownloadError: [0;31mERROR:[0m [youtube] LrN9TyoJHfw: Requested format is not available. Use --list-formats for a list of available formats
+2026-04-10 03:23:30,684 - INFO - [youtube] Extracting URL: https://youtu.be/LrN9TyoJHfw?si=7wa8n3zxthi3qzK1
+2026-04-10 03:23:30,684 - INFO - [youtube] LrN9TyoJHfw: Downloading webpage
+2026-04-10 03:23:32,053 - INFO - [youtube] LrN9TyoJHfw: Downloading android player API JSON
+2026-04-10 03:23:32,528 - INFO - [youtube] LrN9TyoJHfw: Downloading ios player API JSON
+2026-04-10 03:23:32,982 - INFO - [youtube] LrN9TyoJHfw: Downloading mweb client config
+2026-04-10 03:23:33,579 - INFO - [youtube] LrN9TyoJHfw: Downloading mweb player API JSON
+2026-04-10 03:23:34,188 - INFO - [youtube] LrN9TyoJHfw: Downloading tv client config
+2026-04-10 03:23:34,700 - INFO - [youtube] LrN9TyoJHfw: Downloading player 8a6e7bc4-main
+2026-04-10 03:23:35,196 - INFO - [youtube] LrN9TyoJHfw: Downloading tv player API JSON
+2026-04-10 03:23:35,885 - WARNING - [youtube] LrN9TyoJHfw: android client https formats require a GVS PO Token which was not provided. They will be skipped as they may yield HTTP Error 403. You can manually pass a GVS PO Token for this client with --extractor-args "youtube:po_token=android.gvs+XXX". For more information, refer to  https://github.com/yt-dlp/yt-dlp/wiki/PO-Token-Guide
+2026-04-10 03:23:35,890 - WARNING - [youtube] LrN9TyoJHfw: ios client https formats require a GVS PO Token which was not provided. They will be skipped as they may yield HTTP Error 403. You can manually pass a GVS PO Token for this client with --extractor-args "youtube:po_token=ios.gvs+XXX". For more information, refer to  https://github.com/yt-dlp/yt-dlp/wiki/PO-Token-Guide
+2026-04-10 03:23:35,895 - WARNING - [youtube] LrN9TyoJHfw: ios client hls formats require a GVS PO Token which was not provided. They will be skipped as they may yield HTTP Error 403. You can manually pass a GVS PO Token for this client with --extractor-args "youtube:po_token=ios.gvs+XXX". For more information, refer to  https://github.com/yt-dlp/yt-dlp/wiki/PO-Token-Guide
+2026-04-10 03:23:35,900 - WARNING - [youtube] LrN9TyoJHfw: mweb client https formats require a GVS PO Token which was not provided. They will be skipped as they may yield HTTP Error 403. You can manually pass a GVS PO Token for this client with --extractor-args "youtube:po_token=mweb.gvs+XXX". For more information, refer to  https://github.com/yt-dlp/yt-dlp/wiki/PO-Token-Guide
+2026-04-10 03:23:35,930 - WARNING - [youtube] LrN9TyoJHfw: Some tv client https formats have been skipped as they are DRM protected. The current session may have an experiment that applies DRM to all videos on the tv client. See  https://github.com/yt-dlp/yt-dlp/issues/12563  for more details.
+2026-04-10 03:23:35,931 - WARNING - [youtube] LrN9TyoJHfw: n challenge solving failed: Some formats may be missing. Ensure you have a supported JavaScript runtime and challenge solver script distribution installed. Review any warnings presented before this message. For more details, refer to  https://github.com/yt-dlp/yt-dlp/wiki/EJS
+2026-04-10 03:23:36,030 - INFO - [info] LrN9TyoJHfw: Downloading 1 format(s): 18
+2026-04-10 03:23:36,916 - INFO - [download] Destination: E:\talha\AeroFetch-main\AeroFetch-main\backend\downloads\aerofetch_480p_LrN9TyoJHfw.mp4
+2026-04-10 03:23:36,916 - INFO - [download] [0;94m  0.0%[0m of   12.56MiB at [0;32m Unknown B/s[0m ETA [0;33mUnknown[0m
+2026-04-10 03:23:36,917 - INFO - [download] [0;94m  0.0%[0m of   12.56MiB at [0;32m Unknown B/s[0m ETA [0;33mUnknown[0m
+2026-04-10 03:23:36,918 - INFO - [download] [0;94m  0.1%[0m of   12.56MiB at [0;32m   3.42MiB/s[0m ETA [0;33m00:03[0m
+2026-04-10 03:23:36,919 - INFO - [download] [0;94m  0.1%[0m of   12.56MiB at [0;32m   5.75MiB/s[0m ETA [0;33m00:02[0m
+2026-04-10 03:23:36,919 - INFO - [download] [0;94m  0.2%[0m of   12.56MiB at [0;32m  11.88MiB/s[0m ETA [0;33m00:01[0m
+2026-04-10 03:23:36,921 - INFO - [download] [0;94m  0.5%[0m of   12.56MiB at [0;32m  13.54MiB/s[0m ETA [0;33m00:00[0m
+2026-04-10 03:23:36,931 - INFO - [download] [0;94m  1.0%[0m of   12.56MiB at [0;32m   8.65MiB/s[0m ETA [0;33m00:01[0m
+2026-04-10 03:23:36,935 - INFO - [download] [0;94m  2.0%[0m of   12.56MiB at [0;32m  12.85MiB/s[0m ETA [0;33m00:00[0m
+2026-04-10 03:23:37,004 - INFO - [download] [0;94m  4.0%[0m of   12.56MiB at [0;32m   5.67MiB/s[0m ETA [0;33m00:02[0m
+2026-04-10 03:23:37,012 - INFO - [download] [0;94m  8.0%[0m of   12.56MiB at [0;32m  10.46MiB/s[0m ETA [0;33m00:01[0m
+2026-04-10 03:23:37,021 - INFO - [download] [0;94m 15.9%[0m of   12.56MiB at [0;32m  18.98MiB/s[0m ETA [0;33m00:00[0m
+2026-04-10 03:23:37,855 - INFO - [download] [0;94m 31.8%[0m of   12.56MiB at [0;32m   4.26MiB/s[0m ETA [0;33m00:02[0m
+2026-04-10 03:23:37,879 - INFO - [download] [0;94m 50.9%[0m of   12.56MiB at [0;32m   6.65MiB/s[0m ETA [0;33m00:00[0m
+2026-04-10 03:23:38,854 - INFO - [download] [0;94m 76.1%[0m of   12.56MiB at [0;32m   4.93MiB/s[0m ETA [0;33m00:00[0m
+2026-04-10 03:23:38,873 - INFO - [download] [0;94m 76.1%[0m of   12.56MiB at [0;32m Unknown B/s[0m ETA [0;33mUnknown[0m
+2026-04-10 03:23:38,874 - INFO - [download] [0;94m 76.1%[0m of   12.56MiB at [0;32m   2.93MiB/s[0m ETA [0;33m00:01[0m
+2026-04-10 03:23:38,874 - INFO - [download] [0;94m 76.1%[0m of   12.56MiB at [0;32m   6.83MiB/s[0m ETA [0;33m00:00[0m
+2026-04-10 03:23:38,874 - INFO - [download] [0;94m 76.2%[0m of   12.56MiB at [0;32m  14.63MiB/s[0m ETA [0;33m00:00[0m
+2026-04-10 03:23:38,877 - INFO - [download] [0;94m 76.3%[0m of   12.56MiB at [0;32m   7.57MiB/s[0m ETA [0;33m00:00[0m
+2026-04-10 03:23:38,878 - INFO - [download] [0;94m 76.6%[0m of   12.56MiB at [0;32m  12.30MiB/s[0m ETA [0;33m00:00[0m
+2026-04-10 03:23:38,882 - INFO - [download] [0;94m 77.1%[0m of   12.56MiB at [0;32m  13.81MiB/s[0m ETA [0;33m00:00[0m
+2026-04-10 03:23:38,928 - INFO - [download] [0;94m 78.1%[0m of   12.56MiB at [0;32m   4.62MiB/s[0m ETA [0;33m00:00[0m
+2026-04-10 03:23:39,016 - INFO - [download] [0;94m 80.1%[0m of   12.56MiB at [0;32m   3.50MiB/s[0m ETA [0;33m00:00[0m
+2026-04-10 03:23:39,197 - INFO - [download] [0;94m 84.0%[0m of   12.56MiB at [0;32m   3.08MiB/s[0m ETA [0;33m00:00[0m
+2026-04-10 03:23:39,546 - INFO - [download] [0;94m 92.0%[0m of   12.56MiB at [0;32m   2.97MiB/s[0m ETA [0;33m00:00[0m
+2026-04-10 03:23:39,903 - INFO - [download] [0;94m100.0%[0m of   12.56MiB at [0;32m   2.92MiB/s[0m ETA [0;33m00:00[0m
+2026-04-10 03:23:39,904 - INFO - [download] 100% of   12.56MiB in [1;37m00:00:03[0m at [0;32m3.25MiB/s[0m
+2026-04-10 03:23:57,455 - INFO - [TikTok] Extracting URL: https://www.tiktok.com/@mastibot/video/7617529788667874582?is_from_webapp=1&sender_device=pc
+2026-04-10 03:23:57,455 - INFO - [TikTok] 7617529788667874582: Downloading webpage
+2026-04-10 03:23:57,456 - WARNING - [TikTok] The extractor is attempting impersonation, but no impersonate target is available. If you encounter errors, then see  https://github.com/yt-dlp/yt-dlp#impersonation  for information on installing the required dependencies
+2026-04-10 03:23:57,740 - INFO - [TikTok] Solving JS challenge using native Python implementation
+2026-04-10 03:23:57,742 - INFO - [TikTok] 7617529788667874582: Downloading webpage with challenge cookie
+2026-04-10 03:24:01,614 - INFO - [TikTok] Extracting URL: https://www.tiktok.com/@mastibot/video/7617529788667874582?is_from_webapp=1&sender_device=pc
+2026-04-10 03:24:01,614 - INFO - [TikTok] 7617529788667874582: Downloading webpage
+2026-04-10 03:24:01,615 - WARNING - [TikTok] The extractor is attempting impersonation, but no impersonate target is available. If you encounter errors, then see  https://github.com/yt-dlp/yt-dlp#impersonation  for information on installing the required dependencies
+2026-04-10 03:24:01,890 - INFO - [TikTok] Solving JS challenge using native Python implementation
+2026-04-10 03:24:01,891 - INFO - [TikTok] 7617529788667874582: Downloading webpage with challenge cookie
+2026-04-10 03:24:02,555 - ERROR - [0;31mERROR:[0m [TikTok] 7617529788667874582: Requested format is not available. Use --list-formats for a list of available formats
+2026-04-10 03:24:02,555 - ERROR - Download failed
+Traceback (most recent call last):
+  File "E:\talha\AeroFetch-main\AeroFetch-main\venv\Lib\site-packages\yt_dlp\YoutubeDL.py", line 1698, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\talha\AeroFetch-main\AeroFetch-main\venv\Lib\site-packages\yt_dlp\YoutubeDL.py", line 1854, in __extract_info
+    return self.process_ie_result(ie_result, download, extra_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\talha\AeroFetch-main\AeroFetch-main\venv\Lib\site-packages\yt_dlp\YoutubeDL.py", line 1913, in process_ie_result
+    ie_result = self.process_video_result(ie_result, download=download)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\talha\AeroFetch-main\AeroFetch-main\venv\Lib\site-packages\yt_dlp\YoutubeDL.py", line 3058, in process_video_result
+    raise ExtractorError(
+yt_dlp.utils.ExtractorError: [TikTok] 7617529788667874582: Requested format is not available. Use --list-formats for a list of available formats
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\talha\AeroFetch-main\AeroFetch-main\backend\utils\downloader.py", line 250, in download_video
+    info = ydl.extract_info(url, download=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\talha\AeroFetch-main\AeroFetch-main\venv\Lib\site-packages\yt_dlp\YoutubeDL.py", line 1687, in extract_info
+    return self.__extract_info(url, self.get_info_extractor(key), download, extra_info, process)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\talha\AeroFetch-main\AeroFetch-main\venv\Lib\site-packages\yt_dlp\YoutubeDL.py", line 1716, in wrapper
+    self.report_error(str(e), e.format_traceback())
+  File "E:\talha\AeroFetch-main\AeroFetch-main\venv\Lib\site-packages\yt_dlp\YoutubeDL.py", line 1154, in report_error
+    self.trouble(f'{self._format_err("ERROR:", self.Styles.ERROR)} {message}', *args, **kwargs)
+  File "E:\talha\AeroFetch-main\AeroFetch-main\venv\Lib\site-packages\yt_dlp\YoutubeDL.py", line 1093, in trouble
+    raise DownloadError(message, exc_info)
+yt_dlp.utils.DownloadError: [0;31mERROR:[0m [TikTok] 7617529788667874582: Requested format is not available. Use --list-formats for a list of available formats
+2026-04-10 03:24:04,866 - INFO - [TikTok] Extracting URL: https://www.tiktok.com/@mastibot/video/7617529788667874582?is_from_webapp=1&sender_device=pc
+2026-04-10 03:24:04,866 - INFO - [TikTok] 7617529788667874582: Downloading webpage
+2026-04-10 03:24:04,867 - WARNING - [TikTok] The extractor is attempting impersonation, but no impersonate target is available. If you encounter errors, then see  https://github.com/yt-dlp/yt-dlp#impersonation  for information on installing the required dependencies
+2026-04-10 03:24:05,133 - INFO - [TikTok] Solving JS challenge using native Python implementation
+2026-04-10 03:24:05,134 - INFO - [TikTok] 7617529788667874582: Downloading webpage with challenge cookie
+2026-04-10 03:24:05,759 - ERROR - [0;31mERROR:[0m [TikTok] 7617529788667874582: Requested format is not available. Use --list-formats for a list of available formats
+2026-04-10 03:24:05,759 - ERROR - Download failed
+Traceback (most recent call last):
+  File "E:\talha\AeroFetch-main\AeroFetch-main\venv\Lib\site-packages\yt_dlp\YoutubeDL.py", line 1698, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\talha\AeroFetch-main\AeroFetch-main\venv\Lib\site-packages\yt_dlp\YoutubeDL.py", line 1854, in __extract_info
+    return self.process_ie_result(ie_result, download, extra_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\talha\AeroFetch-main\AeroFetch-main\venv\Lib\site-packages\yt_dlp\YoutubeDL.py", line 1913, in process_ie_result
+    ie_result = self.process_video_result(ie_result, download=download)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\talha\AeroFetch-main\AeroFetch-main\venv\Lib\site-packages\yt_dlp\YoutubeDL.py", line 3058, in process_video_result
+    raise ExtractorError(
+yt_dlp.utils.ExtractorError: [TikTok] 7617529788667874582: Requested format is not available. Use --list-formats for a list of available formats
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\talha\AeroFetch-main\AeroFetch-main\backend\utils\downloader.py", line 250, in download_video
+    info = ydl.extract_info(url, download=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\talha\AeroFetch-main\AeroFetch-main\venv\Lib\site-packages\yt_dlp\YoutubeDL.py", line 1687, in extract_info
+    return self.__extract_info(url, self.get_info_extractor(key), download, extra_info, process)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\talha\AeroFetch-main\AeroFetch-main\venv\Lib\site-packages\yt_dlp\YoutubeDL.py", line 1716, in wrapper
+    self.report_error(str(e), e.format_traceback())
+  File "E:\talha\AeroFetch-main\AeroFetch-main\venv\Lib\site-packages\yt_dlp\YoutubeDL.py", line 1154, in report_error
+    self.trouble(f'{self._format_err("ERROR:", self.Styles.ERROR)} {message}', *args, **kwargs)
+  File "E:\talha\AeroFetch-main\AeroFetch-main\venv\Lib\site-packages\yt_dlp\YoutubeDL.py", line 1093, in trouble
+    raise DownloadError(message, exc_info)
+yt_dlp.utils.DownloadError: [0;31mERROR:[0m [TikTok] 7617529788667874582: Requested format is not available. Use --list-formats for a list of available formats
+2026-04-10 03:24:08,324 - INFO - [TikTok] Extracting URL: https://www.tiktok.com/@mastibot/video/7617529788667874582?is_from_webapp=1&sender_device=pc
+2026-04-10 03:24:08,324 - INFO - [TikTok] 7617529788667874582: Downloading webpage
+2026-04-10 03:24:08,325 - WARNING - [TikTok] The extractor is attempting impersonation, but no impersonate target is available. If you encounter errors, then see  https://github.com/yt-dlp/yt-dlp#impersonation  for information on installing the required dependencies
+2026-04-10 03:24:08,592 - INFO - [TikTok] Solving JS challenge using native Python implementation
+2026-04-10 03:24:08,593 - INFO - [TikTok] 7617529788667874582: Downloading webpage with challenge cookie
+2026-04-10 03:24:09,217 - INFO - [info] 7617529788667874582: Downloading 1 format(s): bytevc1_720p_693182-1
+2026-04-10 03:24:09,589 - INFO - [download] Destination: E:\talha\AeroFetch-main\AeroFetch-main\backend\downloads\aerofetch_720p_HD_7617529788667874582.mp4
+2026-04-10 03:24:09,590 - INFO - [download] [0;94m  0.1%[0m of  677.87KiB at [0;32m 199.94KiB/s[0m ETA [0;33m00:03[0m
+2026-04-10 03:24:09,590 - INFO - [download] [0;94m  0.4%[0m of  677.87KiB at [0;32m 499.84KiB/s[0m ETA [0;33m00:01[0m
+2026-04-10 03:24:09,590 - INFO - [download] [0;94m  1.0%[0m of  677.87KiB at [0;32m   1.14MiB/s[0m ETA [0;33m00:00[0m
+2026-04-10 03:24:09,591 - INFO - [download] [0;94m  2.2%[0m of  677.87KiB at [0;32m   2.44MiB/s[0m ETA [0;33m00:00[0m
+2026-04-10 03:24:09,600 - INFO - [download] [0;94m  4.6%[0m of  677.87KiB at [0;32m   1.89MiB/s[0m ETA [0;33m00:00[0m
+2026-04-10 03:24:09,696 - INFO - [download] [0;94m  9.3%[0m of  677.87KiB at [0;32m 558.37KiB/s[0m ETA [0;33m00:01[0m
+2026-04-10 03:24:09,739 - INFO - [download] [0;94m 18.7%[0m of  677.87KiB at [0;32m 816.06KiB/s[0m ETA [0;33m00:00[0m
+2026-04-10 03:24:09,848 - INFO - [download] [0;94m 37.6%[0m of  677.87KiB at [0;32m 963.18KiB/s[0m ETA [0;33m00:00[0m
+2026-04-10 03:24:09,970 - INFO - [download] [0;94m 75.4%[0m of  677.87KiB at [0;32m   1.29MiB/s[0m ETA [0;33m00:00[0m
+2026-04-10 03:24:10,040 - INFO - [download] [0;94m100.0%[0m of  677.87KiB at [0;32m   1.45MiB/s[0m ETA [0;33m00:00[0m
+2026-04-10 03:24:10,041 - INFO - [download] 100% of  677.87KiB in [1;37m00:00:00[0m at [0;32m830.84KiB/s[0m
+2026-04-10 03:24:29,308 - INFO - [facebook] Extracting URL: https://www.facebook.com/watch/?v=1506719587838464
+2026-04-10 03:24:29,309 - INFO - [facebook] 1506719587838464: Downloading webpage
+2026-04-10 03:24:31,480 - INFO - [info] 1506719587838464: Downloading 1 format(s): 830807516119945v+2738072079881787a
+2026-04-10 03:24:31,511 - INFO - [download] Destination: E:\talha\AeroFetch-main\AeroFetch-main\backend\downloads\aerofetch_4K__2160p__1506719587838464.f830807516119945v.mp4
+2026-04-10 03:24:31,511 - INFO - [download] [0;94m  0.0%[0m of    8.13MiB at [0;32m 665.55KiB/s[0m ETA [0;33m00:12[0m
+2026-04-10 03:24:31,513 - INFO - [download] [0;94m  0.0%[0m of    8.13MiB at [0;32m 856.21KiB/s[0m ETA [0;33m00:09[0m
+2026-04-10 03:24:31,513 - INFO - [download] [0;94m  0.1%[0m of    8.13MiB at [0;32m   1.95MiB/s[0m ETA [0;33m00:04[0m
+2026-04-10 03:24:31,514 - INFO - [download] [0;94m  0.2%[0m of    8.13MiB at [0;32m   3.61MiB/s[0m ETA [0;33m00:02[0m
+2026-04-10 03:24:31,514 - INFO - [download] [0;94m  0.4%[0m of    8.13MiB at [0;32m   7.45MiB/s[0m ETA [0;33m00:01[0m
+2026-04-10 03:24:31,517 - INFO - [download] [0;94m  0.8%[0m of    8.13MiB at [0;32m   8.75MiB/s[0m ETA [0;33m00:00[0m
+2026-04-10 03:24:31,520 - INFO - [download] [0;94m  1.5%[0m of    8.13MiB at [0;32m  13.73MiB/s[0m ETA [0;33m00:00[0m
+2026-04-10 03:24:31,524 - INFO - [download] [0;94m  3.1%[0m of    8.13MiB at [0;32m  17.75MiB/s[0m ETA [0;33m00:00[0m
+2026-04-10 03:24:31,528 - INFO - [download] [0;94m  6.1%[0m of    8.13MiB at [0;32m  27.66MiB/s[0m ETA [0;33m00:00[0m
+2026-04-10 03:24:31,536 - INFO - [download] [0;94m 12.3%[0m of    8.13MiB at [0;32m  39.74MiB/s[0m ETA [0;33m00:00[0m
+2026-04-10 03:24:31,545 - INFO - [download] [0;94m 24.6%[0m of    8.13MiB at [0;32m  56.88MiB/s[0m ETA [0;33m00:00[0m
+2026-04-10 03:24:31,572 - INFO - [download] [0;94m 49.2%[0m of    8.13MiB at [0;32m  63.99MiB/s[0m ETA [0;33m00:00[0m
+2026-04-10 03:24:32,851 - INFO - [download] [0;94m 98.4%[0m of    8.13MiB at [0;32m   5.96MiB/s[0m ETA [0;33m00:00[0m
+2026-04-10 03:24:32,896 - INFO - [download] [0;94m100.0%[0m of    8.13MiB at [0;32m   5.86MiB/s[0m ETA [0;33m00:00[0m
+2026-04-10 03:24:32,897 - INFO - [download] 100% of    8.13MiB in [1;37m00:00:01[0m at [0;32m5.76MiB/s[0m
+2026-04-10 03:24:32,921 - INFO - [download] Destination: E:\talha\AeroFetch-main\AeroFetch-main\backend\downloads\aerofetch_4K__2160p__1506719587838464.f2738072079881787a.m4a
+2026-04-10 03:24:32,922 - INFO - [download] [0;94m  0.7%[0m of  151.78KiB at [0;32m Unknown B/s[0m ETA [0;33mUnknown[0m
+2026-04-10 03:24:32,923 - INFO - [download] [0;94m  2.0%[0m of  151.78KiB at [0;32m   1.46MiB/s[0m ETA [0;33m00:00[0m
+2026-04-10 03:24:32,923 - INFO - [download] [0;94m  4.6%[0m of  151.78KiB at [0;32m   3.41MiB/s[0m ETA [0;33m00:00[0m
+2026-04-10 03:24:32,923 - INFO - [download] [0;94m  9.9%[0m of  151.78KiB at [0;32m   7.32MiB/s[0m ETA [0;33m00:00[0m
+2026-04-10 03:24:32,926 - INFO - [download] [0;94m 20.4%[0m of  151.78KiB at [0;32m   6.05MiB/s[0m ETA [0;33m00:00[0m
+2026-04-10 03:24:32,927 - INFO - [download] [0;94m 41.5%[0m of  151.78KiB at [0;32m  10.25MiB/s[0m ETA [0;33m00:00[0m
+2026-04-10 03:24:32,946 - INFO - [download] [0;94m 83.7%[0m of  151.78KiB at [0;32m   4.92MiB/s[0m ETA [0;33m00:00[0m
+2026-04-10 03:24:32,953 - INFO - [download] [0;94m100.0%[0m of  151.78KiB at [0;32m   4.53MiB/s[0m ETA [0;33m00:00[0m
+2026-04-10 03:24:32,953 - INFO - [download] 100% of  151.78KiB in [1;37m00:00:00[0m at [0;32m2.63MiB/s[0m
+2026-04-10 03:24:32,957 - INFO - [Merger] Merging formats into "E:\talha\AeroFetch-main\AeroFetch-main\backend\downloads\aerofetch_4K__2160p__1506719587838464.mp4"
+2026-04-10 03:24:33,079 - INFO - Deleting original file E:\talha\AeroFetch-main\AeroFetch-main\backend\downloads\aerofetch_4K__2160p__1506719587838464.f2738072079881787a.m4a (pass -k to keep)
+2026-04-10 03:24:33,079 - INFO - Deleting original file E:\talha\AeroFetch-main\AeroFetch-main\backend\downloads\aerofetch_4K__2160p__1506719587838464.f830807516119945v.mp4 (pass -k to keep)
