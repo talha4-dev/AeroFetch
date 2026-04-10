@@ -112,17 +112,18 @@ def get_video_info(url: str) -> dict:
         'referer': 'https://www.youtube.com/',
         'extractor_args': {
             'youtube': {
-                'player_client': ['android', 'ios', 'mweb', 'tv'],
+                'player_client': ['web', 'mweb'],
                 'include_dash_manifest': True,
                 'include_hls_manifest': True,
             }
         },
+        'impersonate': 'chrome',
         'geo_bypass': True,
         'http_headers': {
             'User-Agent': random.choice(USER_AGENTS),
             'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
             'Accept-Language': 'en-US,en;q=0.9',
-            'Referer': 'https://www.youtube.com/',
+            'Referer': 'https://www.facebook.com/' if 'facebook.com' in url else 'https://www.youtube.com/',
         },
         'ffmpeg_location': FFMPEG_PATH,
         'logger': YDLLogger(),
@@ -255,18 +256,12 @@ def download_video(url: str, format_id: str, output_format: str, quality: str) -
             'merge_output_format': 'mp4',
             'nocheckcertificate': True,
             'referer': 'https://www.youtube.com/',
-            'extractor_args': {
-                'youtube': {
-                    'player_client': ['android', 'ios', 'mweb', 'tv'],
-                    'include_dash_manifest': True,
-                    'include_hls_manifest': True,
-                }
-            },
+            'impersonate': 'chrome',
             'http_headers': {
                 'User-Agent': random.choice(USER_AGENTS),
                 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
                 'Accept-Language': 'en-US,en;q=0.9',
-                'Referer': 'https://www.youtube.com/',
+                'Referer': 'https://www.facebook.com/' if 'facebook.com' in url else 'https://www.youtube.com/',
             },
             'ffmpeg_location': FFMPEG_PATH,
             'logger': YDLLogger(),
