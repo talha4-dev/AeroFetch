@@ -56,12 +56,30 @@ def format_filesize(bytes_size):
         bytes_size /= 1024
     return f'{bytes_size:.1f} TB'
 
+def get_cookies_path():
+    """On Render, secret files are read-only. We copy them to /tmp to avoid [Errno 30]."""
+    original_path = Config.COOKIES_FILE
+    if not os.path.exists(original_path):
+        return None
+    
+    # If it's already in /tmp or not in a restricted area, just return it
+    if original_path.startswith('/tmp'):
+        return original_path
+        
+    temp_path = os.path.join('/tmp', 'aerofetch_cookies.txt')
+    try:
+        import shutil
+        shutil.copy2(original_path, temp_path)
+        return temp_path
+    except Exception as e:
+        logger.error(f"Failed to copy cookies to /tmp: {e}")
+        return original_path
+
 def get_video_info(url: str) -> dict:
     """
     Fetch video metadata and available formats using yt-dlp.
     Returns title, thumbnail, duration, formats list.
     """
-    cookies_found = False
     ydl_opts = {
         'quiet': True,
         'no_warnings': True,
@@ -69,7 +87,7 @@ def get_video_info(url: str) -> dict:
         'skip_download': True,
         'check_formats': False,
         'nocheckcertificate': True,
-        'check_formats': False,
+        'cache_dir': False, # Disable cache to avoid write errors
         'referer': 'https://www.youtube.com/',
         'extractor_args': {
             'youtube': {
@@ -87,20 +105,9 @@ def get_video_info(url: str) -> dict:
         'logger': YDLLogger(),
     }
 
-    # Use cookies file if available (bypasses YouTube Data Center IP block on Render)
-    # Check both current dir and parent dir (in case of --chdir)
-    cookie_path = Config.COOKIES_FILE
-    if not os.path.exists(cookie_path) and not os.path.isabs(cookie_path):
-        alt_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), cookie_path) # App root
-        if os.path.exists(alt_path):
-            cookie_path = alt_path
-        else:
-            alt_path = os.path.join('..', cookie_path) # Relative to backend
-            if os.path.exists(alt_path):
-                cookie_path = alt_path
-
-    cookies_found = os.path.exists(cookie_path)
-    if cookies_found:
+    # Use cookies file if available
+    cookie_path = get_cookies_path()
+    if cookie_path:
         ydl_opts['cookiefile'] = cookie_path
 
     try:
@@ -237,21 +244,12 @@ def download_video(url: str, format_id: str, output_format: str, quality: str) -
             },
             'ffmpeg_location': FFMPEG_PATH,
             'logger': YDLLogger(),
+            'cache_dir': False, # Disable cache to avoid write errors
         }
 
     # Use cookies file if available
-    cookie_path = Config.COOKIES_FILE
-    if not os.path.exists(cookie_path) and not os.path.isabs(cookie_path):
-        alt_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), cookie_path) # App root
-        if os.path.exists(alt_path):
-            cookie_path = alt_path
-        else:
-            alt_path = os.path.join('..', cookie_path) # Relative to backend
-            if os.path.exists(alt_path):
-                cookie_path = alt_path
-
-    cookies_found = os.path.exists(cookie_path)
-    if cookies_found:
+    cookie_path = get_cookies_path()
+    if cookie_path:
         ydl_opts['cookiefile'] = cookie_path
 
     try:
