@@ -148,14 +148,16 @@ def get_video_info(url: str) -> dict:
             }
         },
         'geo_bypass': True,
-        'geo_bypass_country': 'US',  # Match your cookies region
+        'geo_bypass_country': 'PK',  # Pakistan country code
         'http_headers': {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
             'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
-            'Accept-Language': 'en-US,en;q=0.9',
+            'Accept-Language': 'en-PK,en;q=0.9,ur;q=0.8',  # Pakistan-specific language
             'Accept-Encoding': 'gzip, deflate',
             'Connection': 'keep-alive',
             'Upgrade-Insecure-Requests': '1',
+            'X-YouTube-Client-Name': '1',
+            'X-YouTube-Client-Version': '2.20240101.00.00',
         },
         'ffmpeg_location': FFMPEG_PATH,
         'logger': YDLLogger(),
@@ -176,12 +178,10 @@ def get_video_info(url: str) -> dict:
 
         # Video formats
         video_qualities = [
-            ('4K (2160p)', '2160', 'mp4', 'video'),
-            ('1440p', '1440', 'mp4', 'video'),
-            ('1080p Full HD', '1080', 'mp4', 'video'),
-            ('720p HD', '720', 'mp4', 'video'),
+            ('360p', '360', 'mp4', 'video'),  # Most likely available in PK
             ('480p', '480', 'mp4', 'video'),
-            ('360p', '360', 'mp4', 'video'),
+            ('720p HD', '720', 'mp4', 'video'),
+            ('1080p Full HD', '1080', 'mp4', 'video'),
         ]
 
         raw_formats = info.get('formats', [])
