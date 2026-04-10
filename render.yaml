@@ -1,3 +1,4 @@
+services:
   - type: web
     name: aerofetch-api-prod
     runtime: python
