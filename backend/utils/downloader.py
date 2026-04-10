@@ -117,7 +117,6 @@ def get_video_info(url: str) -> dict:
                 'include_hls_manifest': True,
             }
         },
-        'impersonate': 'chrome',
         'geo_bypass': True,
         'http_headers': {
             'User-Agent': random.choice(USER_AGENTS),
@@ -255,8 +254,7 @@ def download_video(url: str, format_id: str, output_format: str, quality: str) -
             'no_warnings': True,
             'merge_output_format': 'mp4',
             'nocheckcertificate': True,
-            'referer': 'https://www.youtube.com/',
-            'impersonate': 'chrome',
+            'referer': 'https://www.facebook.com/' if 'facebook.com' in url else 'https://www.youtube.com/',
             'http_headers': {
                 'User-Agent': random.choice(USER_AGENTS),
                 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
