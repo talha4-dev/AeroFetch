@@ -13,6 +13,8 @@ class Config:
     # Path to YouTube cookies file. On Render, name the secret file 'cookies.txt'
     COOKIES_FILE = os.environ.get('YOUTUBE_COOKIES_FILE', 'cookies.txt')
     CORS_ORIGINS = [
+        "https://bilalcode.site",
+        "http://bilalcode.site",
         "https://aero-fetch-web-talha.vercel.app",
         "https://aerofetch-web-talha.vercel.app",
         "http://localhost:5173",
