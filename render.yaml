@@ -5,10 +5,7 @@ services:
     runtime: node
     plan: free
     rootDir: backend-new
-    buildCommand: |
-      npm install
-      apt-get update && apt-get install -y ffmpeg || true
-      pip install yt-dlp || npm install -g yt-dlp || curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp && chmod +x /usr/local/bin/yt-dlp
+    buildCommand: npm install
     startCommand: node app.js
     envVars:
       - key: NODE_ENV
@@ -21,6 +18,8 @@ services:
         value: "false"
       - key: CORS_ORIGIN
         value: "https://aerofetch.onrender.com"
+      - key: RENDER_NIX_PACKAGES
+        value: ffmpeg yt-dlp
 
   # ── Frontend (Static Site) ──
   - type: web
