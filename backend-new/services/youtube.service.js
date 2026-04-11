@@ -62,7 +62,14 @@ class YouTubeService {
 
       const tempFileName = `aerofetch_${job.id}_${Date.now()}`;
       const tempPath = path.join(outDir, `${tempFileName}.%(ext)s`);
-      const cookiesPath = path.join(__dirname, '..', 'cookies.txt');
+      
+      const possibleCookiePaths = [
+          path.join(__dirname, '..', 'cookies.txt'),
+          path.join(process.cwd(), 'cookies.txt'),
+          path.join(process.cwd(), 'backend-new', 'cookies.txt')
+      ];
+      
+      let cookiesPath = possibleCookiePaths.find(p => fs.existsSync(p));
 
       const opts = {
           cookies: cookiesPath,
@@ -75,7 +82,8 @@ class YouTubeService {
           ffmpegLocation: process.platform === 'win32' 
             ? path.join(__dirname, '..', '..', 'bin', 'ffmpeg.exe') 
             : 'ffmpeg',
-          formatSort: 'vcodec:h264,res,acodec:m4a'
+          formatSort: 'vcodec:h264,res,acodec:m4a',
+          userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
       };
 
       if (job.data.output_format && ['mp3', 'm4a'].includes(job.data.output_format)) {
