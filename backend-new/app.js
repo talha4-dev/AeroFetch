@@ -82,6 +82,20 @@ app.post('/api/batch', async (req, res) => {
   }
 });
 
+// In production, serve frontend static files from the same server
+if (process.env.NODE_ENV === 'production') {
+  const frontendDist = path.join(__dirname, '..', 'frontend', 'dist');
+  app.use(express.static(frontendDist));
+
+  // Catch-all: serve index.html for any non-API route (React Router support)
+  app.get('*', (req, res) => {
+    if (!req.path.startsWith('/api')) {
+      res.sendFile(path.join(frontendDist, 'index.html'));
+    }
+  });
+  console.log('📦 Serving frontend static files from:', frontendDist);
+}
+
 // Database Sync and Server start
 sequelize.sync().then(() => {
   console.log('✅ SQLite/MySQL Database connected and synced');

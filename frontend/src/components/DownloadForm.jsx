@@ -118,11 +118,9 @@ export default function DownloadForm({ compact = false }) {
             // Build absolute URL based on api/client definition context or relative pathing natively
             const baseUrl = window.location.hostname.includes('localhost') || window.location.hostname.includes('127.0.0.1') 
               ? 'http://localhost:10000' 
-              : 'https://aerofetch-api-prod.onrender.com';
+              : '';
               
-            const absoluteDownloadUrl = import.meta.env.VITE_API_URL 
-              ? `${import.meta.env.VITE_API_URL}${streamUrl}` 
-              : `${baseUrl}${streamUrl}`;
+            const absoluteDownloadUrl = `${baseUrl}${streamUrl}`;
 
             // Use window.open to navigate directly to the backend stream endpoint
             // This works cross-origin because the backend sets Content-Disposition: attachment
