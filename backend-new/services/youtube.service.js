@@ -92,8 +92,8 @@ class YouTubeService {
             ? path.join(__dirname, '..', '..', 'bin', 'ffmpeg.exe') 
             : 'ffmpeg',
           mergeOutputFormat: 'mp4',
-          userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-          extractorArgs: 'youtube:player_client=web_embedded'
+          userAgent: 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1',
+          extractorArgs: 'youtube:player_client=mweb'
       };
 
       if (job.data.output_format && ['mp3', 'm4a'].includes(job.data.output_format)) {
@@ -199,15 +199,16 @@ class YouTubeService {
             noCheckCertificates: true,
             cookies: cookiesPath,
             format: 'all',
-            userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-            extractorArgs: 'youtube:player_client=web_embedded'
+            userAgent: 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1',
+            extractorArgs: 'youtube:player_client=mweb'
         });
 
         const formats_available = [];
         const seenResolutions = new Set();
 
         if (info.formats) {
-            // RELAXED FILTER: If it has height, it's a candidate for video
+            console.log(`📊 yt-dlp found ${info.formats.length} Raw Formats. Filtering...`);
+            
             const sortedFormats = info.formats
                 .filter(f => f.height) 
                 .sort((a, b) => (b.height || 0) - (a.height || 0));
@@ -225,6 +226,19 @@ class YouTubeService {
                         filesize: this.formatFilesize(f.filesize || f.filesize_approx)
                     });
                 }
+            });
+        }
+
+        // If NO video formats were found (YouTube is being restrictive), add a "Best Available" fallback
+        if (formats_available.filter(f => f.type === 'video').length === 0) {
+            console.warn('⚠️ No specific video resolutions detected. Adding "Best Quality" fallback.');
+            formats_available.push({
+                id: 'bestvideo+bestaudio/best',
+                label: 'Best Quality',
+                quality: 'Auto',
+                format: 'mp4',
+                type: 'video',
+                filesize: 'Unknown'
             });
         }
 
