@@ -46,6 +46,8 @@ router.get('/:jobId/stream', async (req, res) => {
         return res.redirect(job.returnvalue.download_url);
     }
 
+    const { tempPath, fileName } = job.returnvalue;
+    if (fs.existsSync(tempPath)) {
         // Ensure we have a proper extension
         let ext = require('path').extname(tempPath) || require('path').extname(fileName) || '.mp4';
         if (ext === '.mhtml' || !ext) ext = '.mp4'; // Sanity check for bad guesses
