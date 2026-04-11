@@ -92,6 +92,8 @@ class YouTubeService {
             ? path.join(__dirname, '..', '..', 'bin', 'ffmpeg.exe') 
             : 'ffmpeg',
           mergeOutputFormat: 'mp4',
+          forceIpv4: true,
+          referer: 'https://www.youtube.com/',
           userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
           extractorArgs: 'youtube:player_client=tv,mweb,web'
       };
@@ -110,7 +112,9 @@ class YouTubeService {
 
       const formatStr = job.data.format_id && /^\d+$/.test(job.data.format_id)
           ? `${job.data.format_id}+bestaudio/best`
-          : (job.data.format_id || 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best');
+          : (job.data.format_id && job.data.format_id !== 'best' 
+              ? job.data.format_id 
+              : 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best');
 
       // Stage 1: Attempt Authenticated Download (With Cookies)
       try {
@@ -218,6 +222,8 @@ class YouTubeService {
             noWarnings: true,
             noCheckCertificates: true,
             format: 'all',
+            forceIpv4: true,
+            referer: 'https://www.youtube.com/',
             userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
             extractorArgs: 'youtube:player_client=tv,mweb,web'
         };
