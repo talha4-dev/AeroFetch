@@ -73,18 +73,20 @@ class YouTubeService {
 
       const opts = {
           cookies: cookiesPath,
-          format: job.data.format_id || 'bestvideo+bestaudio/best',
+          format: job.data.format_id && job.data.format_id !== 'bestvideo+bestaudio'
+            ? `${job.data.format_id}+bestaudio/best`
+            : 'bestvideo+bestaudio/best',
           output: tempPath,
           noWarnings: true,
           noCheckCertificates: true,
           ffmpegLocation: process.platform === 'win32' 
             ? path.join(__dirname, '..', '..', 'bin', 'ffmpeg.exe') 
             : 'ffmpeg',
-          formatSort: 'vcodec:h264,res,acodec:m4a',
+          // Only force H.264 if we are doing a generic "best" download
+          formatSort: job.data.format_id === 'bestvideo+bestaudio' ? 'vcodec:h264,res,acodec:m4a' : undefined,
           userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
       };
-
-      if (job.data.output_format && ['mp3', 'm4a'].includes(job.data.output_format)) {
+Line 85:       if (job.data.output_format && ['mp3', 'm4a'].includes(job.data.output_format)) {
           opts.extractAudio = true;
           opts.audioFormat = job.data.output_format;
           opts.audioQuality = 0;

@@ -83,7 +83,14 @@ export default function DownloadForm({ compact = false }) {
         if (!selectedQuality) { addToast({ type: 'warning', title: 'Select quality', message: 'Please choose a quality/format' }); return; }
 
         const qualityObj = QUALITY_OPTIONS.find(q => q.value === selectedQuality);
-        const formatId = videoInfo.formats?.find(f => f.label === selectedQuality)?.id || 'bestvideo+bestaudio';
+        
+        // Find the format ID that matches the selected label (e.g., matching '4K' against '2160p')
+        const formatId = videoInfo.formats?.find(f => {
+            const labelLower = f.label.toLowerCase();
+            const selectedLower = selectedQuality.toLowerCase();
+            return labelLower.includes(selectedLower) || selectedLower.includes(labelLower);
+        })?.id || 'bestvideo+bestaudio';
+
         const outputFormat = qualityObj?.type === 'audio'
             ? (selectedQuality.includes('M4A') ? 'm4a' : 'mp3')
             : 'mp4';
