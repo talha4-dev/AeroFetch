@@ -149,7 +149,21 @@ class YouTubeService {
     // Real implementation
     try {
         console.log(`🔍 Extracting metadata via live yt-dlp for: ${url}`);
-        const cookiesPath = path.join(__dirname, '..', 'cookies.txt');
+        
+        // Try multiple locations for cookies.txt (local repo vs Render secret)
+        const possibleCookiePaths = [
+            path.join(__dirname, '..', 'cookies.txt'),
+            path.join(process.cwd(), 'cookies.txt'),
+            path.join(process.cwd(), 'backend-new', 'cookies.txt')
+        ];
+        
+        let cookiesPath = possibleCookiePaths.find(p => fs.existsSync(p));
+        
+        if (!cookiesPath) {
+            console.warn('⚠️ No cookies.txt found in any expected location. Metadata extraction might fail.');
+        } else {
+            console.log(`✅ Using cookies from: ${cookiesPath}`);
+        }
         
         const info = await youtubedl(url, {
             dumpSingleJson: true,
