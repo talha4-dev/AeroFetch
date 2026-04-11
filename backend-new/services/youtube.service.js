@@ -104,23 +104,43 @@ class YouTubeService {
           opts.mergeOutputFormat = 'mp4';
       }
 
-      try {
-        console.log(`🚀 Executing yt-dlp download for job ${job.id}`);
-        // If it's a specific numeric ID (like 313), we should try merging it with best audio
-        const formatStr = job.data.format_id && /^\d+$/.test(job.data.format_id)
-            ? `${job.data.format_id}+bestaudio/best`
-            : (job.data.format_id || 'bestvideo+bestaudio/bestvideo/bestaudio/best');
+      // --- MULTI-STAGE DOWNLOAD LOGIC ---
+      let downloadSuccess = false;
+      let errorLog = '';
 
-        try {
-            await youtubedl(job.data.url, { ...opts, format: formatStr });
-        } catch (firstErr) {
-            console.warn(`⚠️ First download attempt failed for job ${job.id}, trying fallback to 'best'...`);
-            // Fallback to a single-file "best" which is often more likely to bypass cloud-IP blocks
-            await youtubedl(job.data.url, { ...opts, format: 'best' });
-        }
+      const formatStr = job.data.format_id && /^\d+$/.test(job.data.format_id)
+          ? `${job.data.format_id}+bestaudio/best`
+          : (job.data.format_id || 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best');
+
+      // Stage 1: Attempt Authenticated Download (With Cookies)
+      try {
+        console.log(`🚀 Attempting AUTHENTICATED download for job ${job.id}`);
+        await youtubedl(job.data.url, { ...opts, format: formatStr });
+        downloadSuccess = true;
       } catch (err) {
-        console.error('yt-dlp download error block:', err);
-        throw new Error('yt-dlp process failed to download media. Cookies or format issue.');
+        console.warn(`⚠️ Authenticated download failed for job ${job.id}, trying PUBLIC fallback...`);
+        errorLog = err.stderr || err.message;
+
+        // Stage 2: Attempt Public Download (No Cookies)
+        try {
+          const publicOpts = { ...opts };
+          delete publicOpts.cookies; // Remove restricted cookies session
+          
+          // Use a super-resilient format string for fallback
+          const fallbackFormat = 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best';
+          
+          console.log(`🚀 Attempting PUBLIC fallback download for job ${job.id}`);
+          await youtubedl(job.data.url, { ...publicOpts, format: fallbackFormat });
+          downloadSuccess = true;
+          console.log(`✅ PUBLIC fallback succeeded for job ${job.id}!`);
+        } catch (fallbackErr) {
+          console.error(`❌ Both download stages failed for job ${job.id}`);
+          errorLog += ` | Fallback Error: ${fallbackErr.stderr || fallbackErr.message}`;
+        }
+      }
+
+      if (!downloadSuccess) {
+        throw new Error(`All download stages failed. Details: ${errorLog}`);
       }
 
       const files = fs.readdirSync(outDir);
