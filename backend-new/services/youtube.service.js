@@ -86,7 +86,8 @@ class YouTubeService {
           formatSort: job.data.format_id === 'bestvideo+bestaudio' ? 'vcodec:h264,res,acodec:m4a' : undefined,
           userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
       };
-Line 85:       if (job.data.output_format && ['mp3', 'm4a'].includes(job.data.output_format)) {
+
+      if (job.data.output_format && ['mp3', 'm4a'].includes(job.data.output_format)) {
           opts.extractAudio = true;
           opts.audioFormat = job.data.output_format;
           opts.audioQuality = 0;
