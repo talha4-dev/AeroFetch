@@ -1,29 +1,30 @@
 const { Sequelize } = require('sequelize');
+const path = require('path');
 require('dotenv').config();
-
-// Determine database environment
-const isProduction = process.env.NODE_ENV === 'production';
 
 let sequelize;
 
-if (isProduction) {
-  // Use MySQL for production as requested
+// Only use MySQL if DB_HOST is explicitly provided
+if (process.env.DB_HOST) {
   sequelize = new Sequelize(
     process.env.DB_NAME || 'aerofetch_prod',
     process.env.DB_USER || 'root',
     process.env.DB_PASSWORD || '',
     {
-      host: process.env.DB_HOST || 'localhost',
+      host: process.env.DB_HOST,
       dialect: 'mysql',
-      logging: false, // disable logging in prod
+      logging: false,
     }
   );
 } else {
-  // Use SQLite for dev/fallback
-  const path = require('path');
+  // Use SQLite for everything else (dev + Render free tier)
+  const dbPath = process.platform === 'win32'
+    ? path.join(__dirname, '..', 'aerofetch.sqlite')
+    : '/tmp/aerofetch.sqlite';
+    
   sequelize = new Sequelize({
     dialect: 'sqlite',
-    storage: path.join(__dirname, '../../backend/instance/aerofetch.db.backup'),
+    storage: dbPath,
     logging: false
   });
 }
