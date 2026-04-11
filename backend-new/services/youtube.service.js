@@ -94,8 +94,10 @@ class YouTubeService {
           mergeOutputFormat: 'mp4',
           forceIpv4: true,
           referer: 'https://www.youtube.com/',
-          userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-          extractorArgs: 'youtube:player_client=tv,mweb,web'
+          youtubeSkipDashManifest: true,
+          geoBypass: true,
+          userAgent: 'Mozilla/5.0 (Linux; Android 14; Pixel 8 Pro) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.6167.164 Mobile Safari/537.36',
+          extractorArgs: 'youtube:player_client=android,web_embedded,mweb'
       };
 
       if (job.data.output_format && ['mp3', 'm4a'].includes(job.data.output_format)) {
@@ -224,8 +226,10 @@ class YouTubeService {
             format: 'all',
             forceIpv4: true,
             referer: 'https://www.youtube.com/',
-            userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-            extractorArgs: 'youtube:player_client=tv,mweb,web'
+            youtubeSkipDashManifest: true,
+            geoBypass: true,
+            userAgent: 'Mozilla/5.0 (Linux; Android 14; Pixel 8 Pro) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.6167.164 Mobile Safari/537.36',
+            extractorArgs: 'youtube:player_client=android,web_embedded,mweb'
         };
 
         let info;
